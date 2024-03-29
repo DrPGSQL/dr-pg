@@ -30,4 +30,12 @@ navigation:
     sublist:
       - name: PostgreSQL
         link: ./PostgreSQL.html
+  - name: EnterpriseDB
+    link: ./another-page.html
+    sublist:
+      - name: PostgreSQL
+        link: ./PostgreSQL.html
+
+
+
 remote_theme: vaibhavvikas/jekyll-theme-minimalistic
