@@ -30,11 +30,16 @@ foo:
       - title: "Child Link 3"
         url: /child-3-page-url/
 docs:
-  - title: Book Study
+  - title: PostgreSQL
     children:
-      - title: "임베디드 C프로그래밍 최적화"
+      - title: "Command"
         url: /categories/embedded_c_optimization
-  - title: 삽질일기
+      - title: "Backup & Recovery"
+        url: /categories/embedded_c_optimization
+  - title: EnterpriseDB
     children:
-      - title: "라즈베리파이"
+      - title: "EFM"
         url: /categories/raspberry_pi
+      - title: "EPAS"
+        url: /categories/raspberry_pi
+
