@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Doctor PG</title>
+<!-- begin _includes/seo.html --><title>About - Doctor PG</title>
 <meta name="description" content="For All PostgreSQL &amp; EnterpriseDB">
 
 
@@ -20,8 +20,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Doctor PG">
-<meta property="og:title" content="Doctor PG">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="About">
+<meta property="og:url" content="http://localhost:4000/PostgreSQL/">
 
 
   <meta property="og:description" content="For All PostgreSQL &amp; EnterpriseDB">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/PostgreSQL/">
 
 
 
@@ -280,7 +280,7 @@
           
             <li><a href="/categories/raspberry_pi">EFM</a></li>
           
-            <li><a href="/PostgreSQL/">EPAS</a></li>
+            <li><a href="/PostgreSQL/" class="active">EPAS</a></li>
           
         </ul>
         
@@ -297,9 +297,83 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title"></h1>
+      <h1 id="page-title" class="page__title">About</h1>
     
-    
+    <ul>
+  <li>
+    <p>Barman Setup 을 위한 접속</p>
+
+    <ul>
+      <li>패스워드 없이 접속 할때 key copy 순서..
+        <ol>
+          <li>systemctl stop sshd</li>
+          <li>/etc/ssh/sshd_config 
+PasswordAuthentication yes (수정)</li>
+          <li>systemctl start sshd</li>
+          <li>ssh-copy-id -i ./id_rsa.pub postgres@10.7.224.2 (패스워드 입력)
+            <ul>
+              <li>rsa 파일 copy 확인</li>
+            </ul>
+          </li>
+          <li>/etc/ssh/sshd_config 
+PasswordAuthentication no (수정)</li>
+          <li>접속 확인</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>efm cluster-status  “cluster name”  확인 중 모두 UNKNOW 으로 나올 때.. 
+Requires=edb-efm-4.8.service
+Before=postgresql-16.service</p>
+
+    <p>/etc/systemd/system/postgresql-16.service 및</p>
+
+    <p>/etc/systemd/system/edb-efm-4.8.service 확인</p>
+  </li>
+</ul>
+
+<blockquote>
+  <blockquote>
+    <ul>
+      <li>
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Target (VIP - 10.7.223.6)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DB1 (10.7.223.2)</td>
+              <td>ok</td>
+            </tr>
+            <tr>
+              <td>DB2 (10.7.223.3)</td>
+              <td>Not Reach</td>
+            </tr>
+            <tr>
+              <td>DB3 (10.7.224.2)</td>
+              <td>Not Reach</td>
+            </tr>
+            <tr>
+              <td>Tool Server (10.7.223.4)</td>
+              <td>Not Reach</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<p>[efm@dbserver02 ~]$ efm promote efm_ss_cluster
+The primary database will be shut down and a standby will be promoted. Are you sure you want to continue? [y/N]:y
+Would you like to attempt to promote the standby anyway [y/N]: y
+Forcing this promotion may result in data loss - are you sure you want to continue? This is the last prompt. [y/N]: y
+Promote command accepted by local agent. Proceeding with promotion. Run the ‘cluster-status’ command for information about the new cluster state.</p>
+
 
 <h3 class="archive__subtitle">Recent posts</h3>
 
