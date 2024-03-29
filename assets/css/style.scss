@@ -3,7 +3,7 @@
 @import "{{ site.theme }}";
 
 .wrapper {
-  width:1200px;
+  width:1700px;
   // left side is 270
   // 1200-270 = 930
   // 30px free room
@@ -11,7 +11,7 @@
 }
 
 section {
-  width:900px;
+  width:1200px;
   float:right;
   padding-bottom:50px;
 }
