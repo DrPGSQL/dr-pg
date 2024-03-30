@@ -33,15 +33,11 @@ docs:
   - title: PostgreSQL
     children:
       - title: "Frequently Command"
-        url: /categories/embedded_c_optimization
+        url: /PostgreSQL
       - title: "Backup & Recovery"
         url: /categories/embedded_c_optimization
   - title: EnterpriseDB
     children:
       - title: "EPAS"
-        url: /categories/raspberry_pi
-      - title: "Enterprise Failover Manager"
-        url: /PostgreSQL/
-      - title: "PEM"
-        url: /PostgreSQL/
+        url: /PostgreSQL
 
