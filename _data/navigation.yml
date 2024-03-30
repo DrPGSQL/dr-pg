@@ -32,7 +32,7 @@ foo:
 docs:
   - title: PostgreSQL
     children:
-      - title: "Command"
+      - title: "Frequently Command"
         url: /categories/embedded_c_optimization
       - title: "Backup & Recovery"
         url: /categories/embedded_c_optimization
