@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>About - Doctor PG</title>
+<!-- begin _includes/seo.html --><title>Frequently Command - Doctor PG</title>
 <meta name="description" content="For All PostgreSQL &amp; EnterpriseDB">
 
 
@@ -20,7 +20,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Doctor PG">
-<meta property="og:title" content="About">
+<meta property="og:title" content="Frequently Command">
 <meta property="og:url" content="http://localhost:4000/Command/">
 
 
@@ -255,7 +255,7 @@
           
             <li><a href="/Command">Frequently Command</a></li>
           
-            <li><a href="/categories/embedded_c_optimization">Backup & Recovery</a></li>
+            <li><a href="/Backup-Recovery">Backup & Recovery</a></li>
           
         </ul>
         
@@ -286,23 +286,38 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">About</h1>
+      <h1 id="page-title" class="page__title">Frequently Command</h1>
     
-    <p><strong>Replication</strong></p>
+    <p>Initializing the data directory</p>
 
-<p>Status of replication (from the Primary database)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/pgsql-16/bin/initdb <span class="nt">--data-checksums</span> <span class="nt">--auth-local</span><span class="o">=</span>peer <span class="nt">--auth-host</span><span class="o">=</span>scram-sha-256 <span class="nt">--encoding</span><span class="o">=</span>UTF-8 <span class="nt">--waldir</span><span class="o">=</span>/pgwaldata/wal
+</code></pre></div></div>
+
+<p><strong>Replication</strong></p>
+
+<p>Status of replication (from the <strong>Primary database</strong>)</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql -c "SELECT pid, usename, client_addr, sent_lsn, write_lsn, state, sync_state FROM pg_stat_replication"
 </code></pre></div></div>
 
-<p>Status of wal receiver (from the standby server)</p>
+<p>Status of wal receiver (from the <strong>standby server</strong>)</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql -c "SELECT pid, status, slot_name, received_lsn, sender_host, sender_port FROM pg_stat_wal_receiver;"
 </code></pre></div></div>
 
-<p>Clone the standby from the primary database</p>
+<p>Configuration Replication Slots</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql -c "SELECT pg_create_physical_replication_slot(''db02_repl_slot'')"
+</code></pre></div></div>
+
+<p>Checking status for activation of Slot</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql -c "SELECT slot_name, slot_type, active FROM pg_replication_slots;"
+</code></pre></div></div>
 
 <p><strong>Base backup</strong></p>
+
+<p>Clone the standby from the primary database</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pg_basebackup -h 10.7.223.2 -p 5432 -U replication -R -P -X stream -D /pgdata/data --waldir=/pgwaldata/wal
 </code></pre></div></div>

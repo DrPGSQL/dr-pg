@@ -35,9 +35,8 @@ docs:
       - title: "Frequently Command"
         url: /Command
       - title: "Backup & Recovery"
-        url: /categories/embedded_c_optimization
+        url: /Backup-Recovery
   - title: EnterpriseDB
     children:
       - title: "EPAS"
         url: /PostgreSQL
-
