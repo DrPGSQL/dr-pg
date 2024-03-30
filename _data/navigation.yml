@@ -33,7 +33,7 @@ docs:
   - title: PostgreSQL
     children:
       - title: "Frequently Command"
-        url: /PostgreSQL
+        url: /Command
       - title: "Backup & Recovery"
         url: /categories/embedded_c_optimization
   - title: EnterpriseDB
