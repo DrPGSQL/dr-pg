@@ -38,8 +38,10 @@ docs:
         url: /categories/embedded_c_optimization
   - title: EnterpriseDB
     children:
-      - title: "EFM"
-        url: /categories/raspberry_pi
       - title: "EPAS"
+        url: /categories/raspberry_pi
+      - title: "Enterprise Failover Manager"
+        url: /PostgreSQL/
+      - title: "PEM"
         url: /PostgreSQL/
 
