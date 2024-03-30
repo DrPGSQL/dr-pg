@@ -10,19 +10,11 @@ toc_sticky: true
 toc_label: "MYSELF"
 ---
 
-
-
-
-
 **Replication**
-
+{% include codeHeader.html %}
 ```bash
 TEST.....
 ```
-
-
-
-
 
 backup & Recovery.
 
@@ -30,8 +22,10 @@ backup & Recovery.
 
 
 
-afasdfa
+
+
+
+
+alfalfa
 
 asf
-
-
