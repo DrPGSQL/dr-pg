@@ -12,19 +12,12 @@ toc_label: "MYSELF"
 
 **Replication**
 {% include codeHeader.html %}
+
 ```bash
 TEST.....
 ```
 
 backup & Recovery.
-
-
-
-
-
-
-
-
 
 alfalfa
 
