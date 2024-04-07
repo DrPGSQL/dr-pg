@@ -21,7 +21,11 @@ Initializing the data directory
 > /usr/pgsql-16/bin/initdb --data-checksums --auth-local=peer --auth- 
 > host=scram-sha-256 --encoding=UTF-8 --waldir=/pgwaldata/wal
 
-
+> dsalkjlkaslkjkljlaksdjflkjlkj
+>
+> asdjlfaskjdflkasjdf
+>
+> asdflkajsldkfjal
 
 ```bash
 /usr/pgsql-16/bin/initdb --data-checksums --auth-local=peer --auth- 
