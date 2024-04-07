@@ -15,12 +15,13 @@ toc_label: "MYSELF"
 Initializing the data directory
 
 ```bash
-/usr/pgsql-16/bin/initdb --data-checksums --auth-local=peer --auth-host=scram-sha-256 --encoding=UTF-8 --waldir=/pgwaldata/wal
+/usr/pgsql-16/bin/initdb --data-checksums --auth-local=peer --auth- 
+
+host=scram-sha-256 --encoding=UTF-8 --waldir=/pgwaldata/wal
 ```
 
-**Replication**
-
-Status of replication (from the **Primary database**)
+* **Replication**
+  - Status of replication (from the **Primary database**)
 
 ```
 psql -c "SELECT pid, usename, client_addr, sent_lsn, write_lsn, state, sync_state FROM pg_stat_replication"
