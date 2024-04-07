@@ -2,13 +2,12 @@
 layout: home
 author_profile: true
 sidebar:
-  nav: docs
+  nav: "docs"
 permalink: /Backup-Recovery/
-title: Backup and Recovery
+title: "Backup and Recovery"
 toc: true
 toc_sticky: true
-toc_label: MYSELF
-published: false
+toc_label: "MYSELF"
 ---
 
 **Replication**
@@ -18,21 +17,28 @@ published: false
 TEST.....
 ```
 
+backup & Recovery.
 
-
-test
-
-
-abcdefgggg
+alfalfa
 
 
 
 
 
-enter.!!!____
 
 
 
-1.1.-> We loved with a love that was more than love
 
 
+
+
+
+| 1   | 1   |     |
+| --- | --- | --- |
+| 1   |     |     |
+|     | 1   |     |
+|     | 1   |     |
+
+-   
+
+asf
