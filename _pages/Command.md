@@ -10,13 +10,29 @@ toc_sticky: true
 toc_label: "MYSELF"
 ---
 
-
+|      |      |      |
+| ---- | ---- | ---- |
+|      |      |      |
+|      |      |      |
+|      |      |      |
 
 Initializing the data directory
 
 
 
+
+
+
+
+
+
+
+
+
+
 > [!NOTE]
+>
+> [^undefined]:
 >
 > /usr/pgsql-16/bin/initdb --data-checksums --auth-local=peer --auth- 
 > host=scram-sha-256 --encoding=UTF-8 --waldir=/pgwaldata/wal
@@ -33,6 +49,8 @@ Initializing the data directory
 
 * **Replication**
   - Status of replication (from the **Primary database**)
+
+    
 
 ```
 psql -c "SELECT pid, usename, client_addr, sent_lsn, write_lsn, state, sync_state FROM pg_stat_replication"

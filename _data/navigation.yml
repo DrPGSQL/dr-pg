@@ -39,4 +39,4 @@ docs:
   - title: EnterpriseDB
     children:
       - title: "EPAS"
-        url: /PostgreSQL
+        url: /PostgreSQL/Command.html
