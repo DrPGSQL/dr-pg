@@ -12,16 +12,6 @@ toc_label: "MYSELF"
 
 **Replication**
 
-
-
-
-
-
-
-\
-
-\aaa
-
 ```bash
 TEST.....
 ```
