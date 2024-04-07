@@ -11,7 +11,6 @@ toc_label: "MYSELF"
 ---
 
 **Replication**
-{% include codeHeader.html %}
 
 
 
