@@ -25,11 +25,10 @@ Initializing the data directory
 >
 > asdjlfaskjdflkasjdf
 >
-> asdflkajsldkfjal
+> Asdflkajsldkfjal
 
 ```bash
-/usr/pgsql-16/bin/initdb --data-checksums --auth-local=peer --auth- 
-host=scram-sha-256 --encoding=UTF-8 --waldir=/pgwaldata/wal
+/usr/pgsql-16/bin/initdb --data-checksums --auth-local=peer --auth host=scram-sha-256 --encoding=UTF-8 --waldir=/pgwaldata/wal
 ```
 
 * **Replication**
